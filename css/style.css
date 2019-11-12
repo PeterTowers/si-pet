@@ -8,7 +8,8 @@
     --navbar-content-height: 40px;
     --navbar-height: 72px;
     --sidenav-width: 300px;
-    --sidenav-transition: 0.4s;
+    --sidenav-transition-duration: 0.5s;
+    --sidenav-options-transition-duration: 0.3s;
 }
 
 body {
@@ -55,7 +56,7 @@ button {
     height: 100vh;
     z-index: 1032;
     background-color: var(--bg-color);
-    transition: all var(--sidenav-transition) ease-out;
+    transition: all var(--sidenav-transition-duration) ease-out;
 }
 #sidenav.active{
     left: 0;
@@ -98,9 +99,9 @@ button {
     color: gray;
     background-color: transparent;
     transition:
-            transform var(--sidenav-transition),
-            color 0s,
-            background-color 0s;
+        transform var(--sidenav-transition-duration),
+        color 0s,
+        background-color 0s;
     transition-timing-function: ease-in;
 }
 #sidenav.active #sidenav-dismiss{
@@ -124,6 +125,7 @@ button {
 #sidenav-list>li {
     margin-top: 4px;
     margin-right: 2rem;
+    transition: all var(--sidenav-options-transition-duration) ease-out;
 }
 #sidenav-list>li.active,
 #sidenav-list>li:hover {
@@ -141,8 +143,9 @@ button {
     border-radius: 0 22px 22px 0;
     color: black;
     background-color: var(--base-color);
+    font-size: 1.25rem;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--sidenav-options-transition-duration) ease-out;
 }
 #sidenav-list>li>a>i {
     margin-right: 1rem;
@@ -159,8 +162,8 @@ button {
     opacity: 0;
     visibility: hidden;
     transition:
-            opacity var(--sidenav-transition) ease-out 0s,
-            visibility 0s var(--sidenav-transition);
+        opacity var(--sidenav-transition-duration) ease-out 0s,
+        visibility 0s var(--sidenav-transition-duration);
 }
 #sidenav-overlay.active {
     opacity: 1;
