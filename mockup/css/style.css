@@ -25,7 +25,9 @@ button {
 .navbar {
     justify-content: center;
     height: var(--navbar-height);
+    z-index: 1;
     background-color: var(--base-color);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
 #sidenav-toggle {
@@ -38,6 +40,9 @@ button {
 .navbar-brand {
     font-size: 1.75rem;
     font-weight: bolder
+}
+.navbar-brand>i {
+    transform: rotate(-15deg);
 }
 
 /*Sidenav*/
