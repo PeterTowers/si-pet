@@ -122,24 +122,27 @@ button {
     list-style: none;
 }
 #sidenav-list>li {
-    margin-right: 2rem;
-    border-bottom-right-radius: 50%;
-    border-top-right-radius: 50%;
-}
-#sidenav-list>li:not(:first-child) {
     margin-top: 4px;
+    margin-right: 2rem;
+}
+#sidenav-list>li.active,
+#sidenav-list>li:hover {
+    margin-right: .5rem;
+}
+#sidenav-list>li.active>a,
+#sidenav-list>li:hover>a {
+    padding-left: 40px;
+    color: white;
+    background-color: var(--primary-color);
 }
 #sidenav-list>li>a {
     display: block;
     padding: 10px 20px;
+    border-radius: 0 22px 22px 0;
     color: black;
     background-color: var(--base-color);
     text-decoration: none;
-    transition: all 0.3s ease-out;
-}
-#sidenav-list>li>a:hover {
-    color: white;
-    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
 }
 #sidenav-list>li>a>i {
     margin-right: 1rem;
